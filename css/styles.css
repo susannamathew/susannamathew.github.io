@@ -5,6 +5,20 @@
   src: url('https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3SZ2oysoEQEeKwjgmXLRnTc.woff2') format('woff2'); 
 } 
 
+@font-face {
+  font-family: 'Argent Pixel CF';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/ArgentPixelCF-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Argent Pixel CF';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/ArgentPixelCF-Italic.otf') format('opentype');
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +34,34 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: top;
+}
+
+#landing-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  z-index: 3;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #10324B;
+  font-weight: 800;
+}
+
+h1 {
+  font-family: "Argent Pixel CF", "Open Sans", sans-serif;
+  font-size: 80px;
+  color: #10324B;
+}
+
+#title {
+  margin-top: -5px;
+  margin-bottom: 22px;
 }
 
 nav {
