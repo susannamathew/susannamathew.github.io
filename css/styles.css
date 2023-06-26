@@ -179,9 +179,15 @@ nav {
 #landing-art {
   position: absolute;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   z-index: 2;
+}
+
+#landing-art img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
