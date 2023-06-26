@@ -1,4 +1,150 @@
-h1 {
-  text-align: center;
-  color: blue;
+@font-face { 
+  font-family: 'Open Sans'; 
+  font-style: normal; 
+  font-weight: 800; 
+  src: url('https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3SZ2oysoEQEeKwjgmXLRnTc.woff2') format('woff2'); 
+} 
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #A1E8D9;
+}
+
+#landing-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('../images/pagebg.svg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-right: 40px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #10324B;
+  font-weight: 800;
+}
+
+.clouds-container {
+  padding-top: 50px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100%; 
+}
+
+.cloud1 {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  animation: cloud-animation1 30s linear infinite;
+}
+
+@keyframes cloud-animation1 {
+  0% {
+    transform: translateX(0%);
+  }
+  49% {
+    opacity: 1;
+    transform: translateX(-500%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(1000%);
+  }
+  52% {
+    opacity: 1;
+    transform: translateX(1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.cloud2 {
+  position: absolute;
+  left: 70%;
+  top: 15%;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  animation: cloud-animation2 15s linear infinite;
+}
+
+@keyframes cloud-animation2 {
+  0% {
+    transform: translateX(0%);
+  }
+  49% {
+    opacity: 1;
+    transform: translateX(450%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(450%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(-1250%);
+  }
+  52% {
+    opacity: 1;
+    transform: translateX(-1250%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+#landing-art {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  z-index: 2;
 }
