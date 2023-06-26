@@ -1,9 +1,4 @@
-@font-face { 
-  font-family: 'Open Sans'; 
-  font-style: normal; 
-  font-weight: 800; 
-  src: url('https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3SZ2oysoEQEeKwjgmXLRnTc.woff2') format('woff2'); 
-} 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 @font-face {
   font-family: 'Argent Pixel CF';
