@@ -179,7 +179,7 @@ nav {
 #landing-art {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: end;
