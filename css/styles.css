@@ -188,8 +188,80 @@ nav {
   z-index: 2;
 }
 
-#landing-art img {
+#art {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+#window {
+  opacity: 80%;
+  position: absolute;
+  top: 50%;
+  left: 33%;
+}
+
+#health-bar {
+  position: absolute;
+  top: 33%;
+  left: 22%;
+}
+
+#chat {
+  position: absolute;
+  top: 30%;
+  right: 16%;
+}
+
+#coin-container {
+  position: absolute;
+  bottom: 20%;
+  right: 28%;
+}
+
+.coin {
+  position: relative;
+  animation: coin-animation 5s linear infinite;
+  opacity: 0;
+}
+
+#coin1 {
+  top: 10%;
+  animation-delay: 2300ms;
+}
+
+#coin2 {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+#coin3 {
+  top: 30%;
+  animation-delay: 1700ms;
+}
+
+@keyframes coin-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-200%); /* Adjust the vertical movement */
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(-250%); /* Adjust the vertical movement */
+  }
+  71% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
 }
