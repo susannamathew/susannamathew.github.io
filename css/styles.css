@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
+  padding-top: 8%;
   z-index: 3;
 }
 
@@ -50,13 +50,13 @@ h2 {
 
 h1 {
   font-family: "Argent Pixel CF", "Open Sans", sans-serif;
-  font-size: 80px;
+  font-size: 70px;
   color: #10324B;
 }
 
 #title {
-  margin-top: -5px;
-  margin-bottom: 22px;
+  margin-top: -30px;
+  margin-bottom: -5px;
 }
 
 nav {
@@ -88,7 +88,7 @@ nav {
 .nav-links a {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   color: #10324B;
   font-weight: 800;
 }
@@ -180,8 +180,6 @@ nav {
   position: absolute;
   width: 100%;
   bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -191,6 +189,7 @@ nav {
 #art {
   width: 100%;
   height: auto;
+  max-height: 60%;
   object-fit: cover;
 }
 
