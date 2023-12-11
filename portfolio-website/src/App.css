@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-right: 40px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #10324B;
+  font-weight: 800;
+  align-items: center;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: -7px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position:sticky;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Fallback color */
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2a2a2a; /* Blue background for checked state */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Slide to the right */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
