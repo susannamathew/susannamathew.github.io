@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b31f1192.css",
+    "main.js": "/static/js/main.ad00ef71.js",
+    "static/media/ArgentPixelCF-Italic.otf": "/static/media/ArgentPixelCF-Italic.5e3f3f54984a5075eb07.otf",
+    "static/media/ArgentPixelCF-Regular.otf": "/static/media/ArgentPixelCF-Regular.5b8d8cd894e14a34066f.otf",
+    "static/media/landingart.svg": "/static/media/landingart.553f68c39fb73390cef5a32ef3b28e54.svg",
+    "static/media/pagebg.svg": "/static/media/pagebg.b00b29aadf3d898ba1e4.svg",
+    "static/media/coin.svg": "/static/media/coin.f015756e391a7a446baeb784718c5642.svg",
+    "static/media/dark.svg": "/static/media/dark.425ccef8ea68a3f5aa1c.svg",
+    "static/media/logo.svg": "/static/media/logo.2324d7c77a6cf148f0ac.svg",
+    "static/media/logo dark.svg": "/static/media/logo dark.68ef89427e817d0d9f6d.svg",
+    "static/media/star.svg": "/static/media/star.4da495969237858ea5f0f235bccc981b.svg",
+    "index.html": "/index.html",
+    "static/media/cloud2.svg": "/static/media/cloud2.31b4615397c4c5b338bd3c3c5adddbd7.svg",
+    "static/media/cloud1.svg": "/static/media/cloud1.73795ec505afa23b35671281b6ef1494.svg",
+    "main.b31f1192.css.map": "/static/css/main.b31f1192.css.map",
+    "main.ad00ef71.js.map": "/static/js/main.ad00ef71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b31f1192.css",
+    "static/js/main.ad00ef71.js"
+  ]
+}
