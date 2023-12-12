@@ -1,16 +1,20 @@
 
 import React from 'react';
-import './css/styles.css'; // Adjust the path as needed
-import logo from './images/logo.svg'; // Import logo image, repeat for other images
+import './css/styles.css'; 
+import './App.css'; 
 import cloud1 from './images/cloud1.svg';
 import cloud2 from './images/cloud2.svg';
 import windowGif from './images/window.gif';
 import chatGif from './images/text bubble.gif';
 import healthBarGif from './images/healthbar.gif';
 import coinSvg from './images/coin.svg';
+import star from './images/star.svg';
 import landingArt from './images/landingart.svg';
 
-function MyWebsite() {
+function MyWebsite( {theme} ) {
+  const Star = ({ style }) => (
+    <img className="star" src={star} alt="star" style={style} />
+  );
   return (
     <>
       {/* <nav>
@@ -30,10 +34,18 @@ function MyWebsite() {
           <h1 id="title">Susanna Mathew</h1>
           <h2>nice to meet you!</h2>
         </div>
-        <div className="clouds-container">
-          <div className="cloud1"><img src={cloud1} alt="cloud1" /></div>
-          <div className="cloud2"><img src={cloud2} alt="cloud2" /></div>
-        </div>
+        {
+          theme === 'light' ? (
+            <div className="clouds-container">
+              <div className="cloud1"><img src={cloud1} alt="cloud1" /></div>
+              <div className="cloud2"><img src={cloud2} alt="cloud2" /></div>
+            </div>
+          ):(
+            <div className="stars-container">
+              <Star style={{left: '20px', top: '50px'}}/>
+            </div>
+          )
+        }
         <section id="landing-art">
           <img id="window" src={windowGif} alt="window" />
           <img id="chat" src={chatGif} alt="chat" />

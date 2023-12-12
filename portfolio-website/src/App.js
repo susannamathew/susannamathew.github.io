@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import logo from './images/logo.svg';
 import Home from './home.jsx'; // Assuming home.jsx is correctly set up
 import './App.css';
 const Experience = () => <div>Experience Page</div>;
@@ -13,12 +12,22 @@ function App() {
   const toggleClass = () => {
     setIsToggled(!isToggled);
   };
+  const [theme, setTheme] = useState('light'); // Default theme is light
+
+  const toggleTheme = () => {
+    // Toggle between 'light' and 'dark'
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  // Use effect to apply the theme to the data-theme attribute on the root element
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
   return (
     <Router>
       <div className="App">
         <nav>
           <div className="logo">
-            <img src={logo} alt="logo" />
           </div>
           <ul className="nav-links">
             <li><a href="#">ABOUT</a></li>
@@ -26,14 +35,14 @@ function App() {
             <li><a href="#">RESEARCH</a></li>
             <li className="theme-switch-wrapper">
               <label className="switch">
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" onChange={toggleTheme}/>
                 <div className="slider round"></div>
               </label>
             </li>
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home theme={theme} />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/research" element={<Research />} />
         </Routes>

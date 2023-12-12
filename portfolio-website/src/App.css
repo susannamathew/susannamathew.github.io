@@ -1,9 +1,31 @@
+/* Define color scheme for light mode */
+:root {
+  --background-image: url('./images/pagebg.svg'); ;
+  --text-color: #10324B;
+  --logo: url('./images/logo.svg'); ;
+}
+
+/* Define your color scheme for dark mode */
+[data-theme="dark"] {
+  --background-image: url('./images/dark.svg'); ;
+  --text-color: #f8f8f8;
+  --logo: url('./images/logo dark.svg'); ;
+}
+
+
+
 .App {
   text-align: center;
 }
 
 .logo {
   margin-left: 10px;
+  background-image: var(--logo);
+  width: 50px; 
+  height: 50px; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nav-links {
@@ -20,7 +42,7 @@
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
-  color: #10324B;
+  color: var(--text-color);
   font-weight: 800;
   align-items: center;
 }
