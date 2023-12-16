@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './css/styles.css'; 
+import './css/home.css'; 
 import './App.css'; 
 import cloud1 from './images/cloud1.svg';
 import cloud2 from './images/cloud2.svg';
@@ -15,19 +15,14 @@ function MyWebsite( {theme} ) {
   const Star = ({ style }) => (
     <img className="star" src={star} alt="star" style={style} />
   );
+
+  const starPositions = [
+    { left: '10%', top: '20%' },
+    { left: '30%', top: '0%' },
+  ];
+
   return (
     <>
-      {/* <nav>
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <ul className="nav-links">
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">EXPERIENCE</a></li>
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">RESEARCH</a></li>
-        </ul>
-      </nav> */}
       <section id="landing-page">
         <div id="landing-text">
           <h2>hi, i'm</h2>
@@ -42,7 +37,9 @@ function MyWebsite( {theme} ) {
             </div>
           ):(
             <div className="stars-container">
-              <Star style={{left: '20px', top: '50px'}}/>
+              {starPositions.map((pos, index) => (
+                <Star key={index} style={pos} />
+              ))}
             </div>
           )
         }

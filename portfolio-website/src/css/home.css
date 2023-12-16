@@ -48,6 +48,13 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size:30px;
+  color: var(--text-color);
+  font-weight: 800;
+}
+
 h1 {
   font-family: "Argent Pixel CF", "Open Sans", sans-serif;
   font-size: 70px;
@@ -244,11 +251,12 @@ nav {
 }
 
 .stars-container {
-  /* Similar styling to clouds-container, adjust as necessary */
+  position: relative;
+  width: 100%;
 }
 
 .star {
-  /* Style your star */
+  position: absolute;
   animation: twinkle 2s infinite alternate;
 }
 
