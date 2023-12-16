@@ -1,6 +1,52 @@
-.page-name {
-  position: absolute;
-  top: 7%;
-  left: 7%;
-  
+.experiences-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Experience Card */
+.experience-card {
+  background-color: #10324B; 
+  opacity: 80%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 300px; 
+  margin-bottom: 20px;
+}
+
+.experience-role {
+  font-size: 18px; 
+  margin-bottom: 5px;
+}
+
+.experience-company,
+.experience-time {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.experience-description {
+  font-size: 14px; 
+  margin-bottom: 10px;
+}
+
+/* Skill List */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+}
+
+.skill {
+  background-color: #56CCF2; 
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px; 
+  margin-bottom: 5px;
 }

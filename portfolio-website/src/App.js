@@ -25,7 +25,7 @@ function App() {
   }, [theme]);
   return (
     <Router>
-      <div className="App">
+       <section id="landing-page">
         <nav>
           <a href="/"><div className="logo"></div></a>
           <ul className="nav-links">
@@ -47,7 +47,7 @@ function App() {
           <Route path="/experience" element={<Experience theme={theme} />} />
           <Route path="/research" element={<Research />} />
         </Routes>
-      </div>
+      </section>
     </Router>
     
   );

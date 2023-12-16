@@ -12,10 +12,27 @@
   --logo: url('./images/logo dark.svg'); ;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #A1E8D9;
+}
 
+#landing-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+}
 
-.App {
-  text-align: center;
+.page-name {
+  position: absolute;
+  top: 7%;
+  left: 7%;
 }
 
 .logo {
@@ -111,4 +128,109 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.clouds-container {
+  padding-top: 50px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.cloud1 {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  animation: cloud-animation1 30s linear infinite;
+}
+
+@keyframes cloud-animation1 {
+  0% {
+    transform: translateX(0%);
+  }
+  49% {
+    opacity: 1;
+    transform: translateX(-500%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(1000%);
+  }
+  52% {
+    opacity: 1;
+    transform: translateX(1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.cloud2 {
+  position: absolute;
+  left: 70%;
+  top: 15%;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  animation: cloud-animation2 15s linear infinite;
+}
+
+@keyframes cloud-animation2 {
+  0% {
+    transform: translateX(0%);
+  }
+  49% {
+    opacity: 1;
+    transform: translateX(450%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(450%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(-1250%);
+  }
+  52% {
+    opacity: 1;
+    transform: translateX(-1250%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.stars-container {
+  position: relative;
+  width: 100%;
+}
+
+.star {
+  position: absolute;
+  animation: twinkle 2s infinite alternate;
+}
+
+/* Define keyframes for the twinkle animation */
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
 }

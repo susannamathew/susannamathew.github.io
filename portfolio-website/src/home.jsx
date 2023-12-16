@@ -23,11 +23,10 @@ function MyWebsite( {theme} ) {
 
   return (
     <>
-      <section id="landing-page">
         <div id="landing-text">
-          <h2>hi, i'm</h2>
+          <h3>hi, i'm</h3>
           <h1 id="title">Susanna Mathew</h1>
-          <h2>nice to meet you!</h2>
+          <h3>nice to meet you!</h3>
         </div>
         {
           theme === 'light' ? (
@@ -54,7 +53,6 @@ function MyWebsite( {theme} ) {
           </div>
           <img id="art" src={landingArt} alt="art" />
         </section>
-      </section>
     </>
   );
 }
