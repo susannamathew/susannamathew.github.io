@@ -36,7 +36,7 @@ function App() {
           <a href="/"><div className="logo"></div></a>
           <ul className="nav-links">
             <li><a href="#">ABOUT</a></li>
-            <li><a href="/experience">EXPERIENCE</a></li>
+            <li><a href="#/experience">EXPERIENCE</a></li>
             <li><a href="#">RESEARCH</a></li>
 
             <li className="theme-switch-wrapper">
