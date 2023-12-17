@@ -38,6 +38,7 @@ function App() {
             <li><a href="#">ABOUT</a></li>
             <li><a href="#/experience">EXPERIENCE</a></li>
             <li><a href="#">RESEARCH</a></li>
+            <li><a href="resume.pdf" target="_blank" download>RESUME</a></li>
 
             <li className="theme-switch-wrapper">
               <label className="switch">
