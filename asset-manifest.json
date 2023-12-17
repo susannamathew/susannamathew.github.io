@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.98efb279.css",
-    "main.js": "/static/js/main.39e41a66.js",
+    "main.js": "/static/js/main.05e8ae5d.js",
     "static/media/ArgentPixelCF-Italic.otf": "/static/media/ArgentPixelCF-Italic.5e3f3f54984a5075eb07.otf",
     "static/media/ArgentPixelCF-Regular.otf": "/static/media/ArgentPixelCF-Regular.5b8d8cd894e14a34066f.otf",
     "static/media/landingart.svg": "/static/media/landingart.553f68c39fb73390cef5a32ef3b28e54.svg",
@@ -15,10 +15,10 @@
     "static/media/cloud2.svg": "/static/media/cloud2.31b4615397c4c5b338bd3c3c5adddbd7.svg",
     "static/media/cloud1.svg": "/static/media/cloud1.73795ec505afa23b35671281b6ef1494.svg",
     "main.98efb279.css.map": "/static/css/main.98efb279.css.map",
-    "main.39e41a66.js.map": "/static/js/main.39e41a66.js.map"
+    "main.05e8ae5d.js.map": "/static/js/main.05e8ae5d.js.map"
   },
   "entrypoints": [
     "static/css/main.98efb279.css",
-    "static/js/main.39e41a66.js"
+    "static/js/main.05e8ae5d.js"
   ]
 }
