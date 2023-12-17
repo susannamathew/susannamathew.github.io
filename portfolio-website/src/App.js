@@ -16,11 +16,17 @@ function App() {
 
   const toggleTheme = () => {
     // Toggle between 'light' and 'dark'
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   // Use effect to apply the theme to the data-theme attribute on the root element
   useEffect(() => {
+    const savedTheme = localStorage.getItem('theme'); // Retrieve saved theme
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
   return (
