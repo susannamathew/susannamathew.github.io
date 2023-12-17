@@ -1,6 +1,7 @@
 /* Define color scheme for light mode */
 :root {
-  --background-image: url('./images/pagebg.svg'); ;
+  --background-image: url('./images/pagebg.svg');
+  --background-color: #A1E8D9;
   --text-color: #10324B;
   --logo: url('./images/logo.svg'); ;
 }
@@ -8,6 +9,7 @@
 /* Define your color scheme for dark mode */
 [data-theme="dark"] {
   --background-image: url('./images/dark.svg'); ;
+  --background-color: #0D202F;
   --text-color: #f8f8f8;
   --logo: url('./images/logo dark.svg'); ;
 }
@@ -42,7 +44,7 @@ h1 {
 body {
   margin: 0;
   padding: 0;
-  background-color: #A1E8D9;
+  background-color: var(--background-color);
 }
 
 #landing-page {

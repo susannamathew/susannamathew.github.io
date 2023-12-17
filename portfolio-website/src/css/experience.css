@@ -6,6 +6,22 @@
   margin: auto;
 }
 
+h4 {
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.col{
+  display: flex;
+  align-items: center;
+}
+
 /* Experience Card */
 .experience-card {
   /* Break inside avoid to prevent cards from being split across columns */
@@ -16,7 +32,7 @@
   background-color: #10324B;
   opacity: 0.8;
   border-radius: 15px;
-  padding: 20px;
+  padding: 5px 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   color: white;
   margin-bottom: 2rem;
@@ -26,11 +42,14 @@
 
 .experience-role {
   color: white;
+  margin-bottom: -10px;
 }
 
 .experience-company,
 .experience-time {
   color: white;
+  margin-right: 10px;
+  margin-bottom: 2px;
 }
 
 .experience-description {
@@ -47,7 +66,6 @@
 
 
 .skill {
-  background-color: #56CCF2; 
   border-radius: 20px;
   padding: 5px 15px;
   font-size: 14px; 
