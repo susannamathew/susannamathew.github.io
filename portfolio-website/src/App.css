@@ -12,6 +12,33 @@
   --logo: url('./images/logo dark.svg'); ;
 }
 
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight:400;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size:30px;
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+h1 {
+  font-family: "Argent Pixel CF", "Open Sans", sans-serif;
+  font-size: 70px;
+  color: var(--text-color);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,9 +57,10 @@ body {
 }
 
 .page-name {
-  position: absolute;
-  top: 7%;
-  left: 7%;
+  position: relative;
+  top: 8%;
+  left: 6%;
+  margin-bottom: 80px;
 }
 
 .logo {

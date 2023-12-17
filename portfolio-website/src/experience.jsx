@@ -55,10 +55,10 @@ function MyWebsite( {theme} ) {
   function ExperienceCard({ roleName, company, time, description, skills }) {
     return (
       <div className="experience-card">
-        <h4 className="experience-role">{roleName}</h4>
-        {company && <p className="experience-company">{company}</p>}
-        {time && <p className="experience-time">{time}</p>}
-        <p className="experience-description">{description}</p>
+        <h3 className="experience-role">{roleName}</h3>
+        {company && <h4 className="experience-company">{company}</h4>}
+        <h4 className="experience-time">{time}</h4>
+        <h4 className="experience-description">{description}</h4>
         <SkillList skills={skills} />
       </div>
     );
@@ -68,7 +68,9 @@ function MyWebsite( {theme} ) {
     return (
       <ul className="skills-list">
         {skills.map((skill, index) => (
-          <li key={index} className="skill">{skill}</li>
+          <li key={index} className="skill-bubble">
+            <h4 className="skill">{skill}</h4>
+          </li>
         ))}
       </ul>
     );
@@ -78,7 +80,7 @@ function MyWebsite( {theme} ) {
     <>
     <section id="landing-page">
         <div className="page-name">
-          <h3>Experience + Projects</h3>
+          <h2>Experience + Projects</h2>
         </div>
         {
           theme === 'light' ? (

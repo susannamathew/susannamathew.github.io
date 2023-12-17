@@ -1,37 +1,40 @@
 .experiences-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  column-count: 3;
+  column-gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px; /* Adjust the width as necessary */
+  margin: auto;
 }
 
 /* Experience Card */
 .experience-card {
-  background-color: #10324B; 
-  opacity: 80%;
-  border-radius: 10px;
+  /* Break inside avoid to prevent cards from being split across columns */
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+
+  background-color: #10324B;
+  opacity: 0.8;
+  border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   color: white;
-  width: 300px; 
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  display: inline-block; /* Allows the card to respect the column layout */
+
 }
 
 .experience-role {
-  font-size: 18px; 
-  margin-bottom: 5px;
+  color: white;
 }
 
 .experience-company,
 .experience-time {
-  font-size: 16px;
-  margin-bottom: 5px;
+  color: white;
 }
 
 .experience-description {
-  font-size: 14px; 
-  margin-bottom: 10px;
+  color: white;
 }
 
 /* Skill List */
@@ -40,13 +43,13 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; 
 }
+
 
 .skill {
   background-color: #56CCF2; 
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 20px;
+  padding: 5px 15px;
   font-size: 14px; 
-  margin-bottom: 5px;
+  margin: 5px 5px 5px 0px;
 }
