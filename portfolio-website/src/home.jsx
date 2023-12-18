@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './css/home.css'; 
-import './App.css'; 
+import './css/App.css'; 
 import cloud1 from './images/cloud1.svg';
 import cloud2 from './images/cloud2.svg';
 import windowGif from './images/window.gif';

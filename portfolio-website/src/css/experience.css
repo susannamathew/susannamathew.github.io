@@ -4,8 +4,8 @@
   column-count: 3;
   column-gap: 3rem;
   padding: 1rem;
-  max-width: 1500px; /* Adjust the width as necessary */
-  margin: auto;
+  max-width: 1500px; 
+  margin: 0px 70px;
 }
 
 h4 {

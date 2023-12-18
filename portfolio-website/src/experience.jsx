@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './css/home.css'; 
 import './css/experience.css'; 
-import './App.css'; 
+import './css/App.css'; 
 import cloud1 from './images/cloud1.svg';
 import cloud2 from './images/cloud2.svg';
 import star from './images/star.svg';

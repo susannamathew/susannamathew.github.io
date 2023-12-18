@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Argent Pixel CF';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/ArgentPixelCF-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Argent Pixel CF';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../fonts/ArgentPixelCF-Italic.otf');
+}
+
+
+#title {
+  margin-top: -30px;
+  margin-bottom: -5px;
+}
+
+#page-art {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+#img {
+  width: 100%;
+  height: auto;
+  max-height: 10%;
+  object-fit: cover;
+}
+
+#resume-preview-container {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left; 
+  margin-left:90px;
+  z-index: 2; 
+}
+
+#resume {
+  max-width: 70%; 
+  max-height: 600px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  flex-direction: column;
+}
+
+#resume-text {
+  width: 400px;
+  margin-left: 70px;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+#button {
+  background-color: #8365D4;
+  width: max-content;
+  border-radius: 100px;
+  padding: 15px 20px;
+}
+
+#button-text {
+  color:white;
+  font-weight: 700;
+  margin: 0px;
+}
+
+a,
+a:visited, 
+a:hover,
+a:active { 
+  text-decoration: none;
+}
