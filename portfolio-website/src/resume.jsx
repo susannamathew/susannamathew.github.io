@@ -28,7 +28,7 @@ function MyWebsite( {theme} ) {
           <img id="resume" src={resumePreview} alt="Resume preview" />
           <div id="resume-text">
             <h3>I'm currently looking for full time Software Engineering roles :)</h3>
-            <a href="resume.pdf" download="Susanna_Mathew_Resume.pdf">
+            <a href="Resume.pdf" download="Susanna_Mathew_Resume.pdf">
               <div id="button"><h4 id="button-text">Download Resume</h4></div>
             </a>
           </div>
