@@ -32,32 +32,32 @@ h4 {
   page-break-inside: avoid;
   -webkit-column-break-inside: avoid;
 
-  background-color: #10324B;
+  background-color: var(--card-color);
   opacity: 0.8;
   border-radius: 15px;
   padding: 5px 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  color: white;
   margin-bottom: 3rem;
   display: inline-block; /* Allows the card to respect the column layout */
 
 }
 
 .experience-role {
-  color: white;
+  color: var(--text-color);
   margin-bottom: -10px;
 }
 
 .experience-company,
 .experience-time {
-  color: white;
+  color: var(--text-color);
   margin-right: 10px;
   margin-bottom: 2px;
 }
 
 .experience-description {
-  color: white;
+  color: var(--text-color);
   font-weight: 500;
+  margin-top: 0px;
 }
 
 /* Skill List */
