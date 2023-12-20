@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './css/home.css'; 
 import './css/experience.css'; 
 import './css/App.css'; 
@@ -66,20 +66,38 @@ function MyWebsite( {theme} ) {
     "Figma": "#E6CD73",
     "Firebase DB": "#3C865E",
     "MySQL": "#3C865E",
-};
+  };
+
+  const logos = {
+    "Juni Learning": require('./images/juni logo.png'),
+    "First American": require('./images/fa logo.png'),
+  };
 
   function ExperienceCard({ roleName, company, time, description, skills }) {
+    // Ref for the card element
+    const cardRef = useRef(null);
+
+    // Effect to resize the card after it's mounted
+    useEffect(() => {
+      if (cardRef.current) {
+        resizeMasonryItem(cardRef.current);
+      }
+    }, []);
+    let logo = company && logos[company];
     return (
-      <div className="experience-card">
-            <h3 className="experience-role">{roleName}</h3>
+      <div className="experience-card" ref={cardRef}>
+        <div className="masonry-content">
             <div className='row'>
-                <div className='col'>
+              {logo && <img src={logo} alt={`${company} logo`} className="company-logo" />}
+              <h3 className="experience-role">{roleName}</h3>
+            </div>
+            <div className='row'>
                     {company && <h4 className="experience-company">{company + " , "}</h4>}
                     {time && <h4 className="experience-time">{time}</h4>}
-                </div>
             </div>
             <h4 className="experience-description">{description}</h4>
             {skills && <SkillList skills={skills} />}
+          </div>
         </div>
     );
   }
@@ -95,6 +113,28 @@ function MyWebsite( {theme} ) {
       </ul>
     );
   }
+
+  function resizeMasonryItem(item) {
+    // Assuming .masonry is your grid container and .masonry-content is the content wrapper inside your .experience-card
+    var grid = document.getElementsByClassName('experiences-container')[0],
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  
+    var rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+    
+    item.style.gridRowEnd = 'span ' + rowSpan;
+  }
+  
+  function resizeAllMasonryItems() {
+    var allItems = document.getElementsByClassName('experience-card');
+  
+    for (var i = 0; i < allItems.length; i++) {
+      resizeMasonryItem(allItems[i]);
+    }
+  }
+  
+  window.onload = resizeAllMasonryItems;
+  window.onresize = resizeAllMasonryItems;
 
   return (
     <>
@@ -114,7 +154,7 @@ function MyWebsite( {theme} ) {
           )
           
         }
-        <div className="page-name">
+        <div className="exp-heading">
           <h2>Experience</h2>
         </div>
          <div className="experiences-container">
@@ -129,7 +169,7 @@ function MyWebsite( {theme} ) {
             />
           ))}
         </div>
-        <div className="page-name">
+        <div className="exp-heading">
           <h2>Projects</h2>
         </div>
          <div className="experiences-container">
@@ -143,7 +183,7 @@ function MyWebsite( {theme} ) {
             />
           ))}
         </div>
-        <div className="page-name">
+        <div className="exp-heading">
           <h2>Research</h2>
         </div>
          <div className="experiences-container">
