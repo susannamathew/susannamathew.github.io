@@ -19,39 +19,38 @@ function MyWebsite( {theme} ) {
   ];
   
   const [experiences, setExperiences] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [research, setResearch] = useState([]);
+
 
   useEffect(() => {
-    const fetchExperiences = async () => {
-      const path = ref(db, '/');
-      const snapshot = await get(path);
-      const data = snapshot.val();
-      const roles = Object.keys(data);
-    
-      const experiencesData = await Promise.all(roles.map(async (roleName) => {
-        const companySnapshot = await get(ref(db, `${roleName}/Company`));
-        const timeSnapshot = await get(ref(db, `${roleName}/Time`));
-        const descriptionSnapshot = await get(ref(db, `${roleName}/Description`));
-        const skillsSnapshot = await get(ref(db, `${roleName}/Skills`));
-    
-        // Convert skills object to array
-        const skills = skillsSnapshot.val() ? Object.values(skillsSnapshot.val()) : [];
-    
-        return {
-          roleName,
-          company: companySnapshot.val(),
-          time: timeSnapshot.val(),
-          description: descriptionSnapshot.val(),
-          skills
-        };
-      }));
-    
+    const fetchData = async () => {
+      const experiencesSnapshot = await get(ref(db, '/Experience'));
+      const experiencesData = transformCardData(experiencesSnapshot.val());
       setExperiences(experiencesData);
+
+      const projectsSnapshot = await get(ref(db, '/Projects'));
+      const projectsData = transformCardData(projectsSnapshot.val());
+      setProjects(projectsData);
+
+      const researchSnapshot = await get(ref(db, '/Research'));
+      const researchData = transformCardData(researchSnapshot.val());
+      setResearch(researchData);
     };
 
-    fetchExperiences();
+    fetchData();
   }, []);
 
-  const comma = "";
+  // Helper function to transform card data from Firebase snapshot
+  function transformCardData(data) {
+    return Object.entries(data || {}).map(([key, value]) => ({
+      name: key,
+      company: value.Company ? value.Company : "",
+      time: value.Time,
+      description: value.Description,
+      skills: value.Skills ? value.Skills : []
+    }));
+  }
 
   const skillColors = {
     "Python": "#B7CF6A", 
@@ -80,7 +79,7 @@ function MyWebsite( {theme} ) {
                 </div>
             </div>
             <h4 className="experience-description">{description}</h4>
-            <SkillList skills={skills} />
+            {skills && <SkillList skills={skills} />}
         </div>
     );
   }
@@ -100,9 +99,6 @@ function MyWebsite( {theme} ) {
   return (
     <>
     <section id="landing-page">
-        <div className="page-name">
-          <h2>Experience + Projects</h2>
-        </div>
         {
           theme === 'light' ? (
             <div className="clouds-container">
@@ -118,15 +114,45 @@ function MyWebsite( {theme} ) {
           )
           
         }
+        <div className="page-name">
+          <h2>Experience</h2>
+        </div>
          <div className="experiences-container">
           {experiences.map((exp, index) => (
             <ExperienceCard 
               key={index}
-              roleName={exp.roleName}
+              roleName={exp.name}
               company={exp.company}
               time={exp.time}
               description={exp.description}
               skills={exp.skills}
+            />
+          ))}
+        </div>
+        <div className="page-name">
+          <h2>Projects</h2>
+        </div>
+         <div className="experiences-container">
+          {projects.map((exp, index) => (
+            <ExperienceCard 
+              key={index}
+              roleName={exp.name}
+              time={exp.time}
+              description={exp.description}
+              skills={exp.skills}
+            />
+          ))}
+        </div>
+        <div className="page-name">
+          <h2>Research</h2>
+        </div>
+         <div className="experiences-container">
+          {research.map((exp, index) => (
+            <ExperienceCard 
+              key={index}
+              roleName={exp.name}
+              time={exp.time}
+              description={exp.description}
             />
           ))}
         </div>

@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 
 .experiences-container {
-  column-count: 3;
-  column-gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Centers the cards horizontally */
+  align-items: flex-start; /* Aligns the cards to the top */
+  gap: 1rem; /* Space between the cards */
   padding: 1rem;
   max-width: 1500px; 
-  margin: 0px 70px;
+  margin-left: 70px;
+}
+
+/* Experience Card */
+.experience-card {
+  background-color: var(--card-color);
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 5px 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem; /* Adjust as needed for spacing between rows */
+  width: calc(33.333% - 1rem); /* Adjust the width as necessary */
+  box-sizing: border-box; /* Includes padding in the width */
 }
 
 h4 {
@@ -23,23 +38,6 @@ h4 {
 .col{
   display: flex;
   align-items: center;
-}
-
-/* Experience Card */
-.experience-card {
-  /* Break inside avoid to prevent cards from being split across columns */
-  break-inside: avoid;
-  page-break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-
-  background-color: var(--card-color);
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 5px 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  margin-bottom: 3rem;
-  display: inline-block; /* Allows the card to respect the column layout */
-
 }
 
 .experience-role {
