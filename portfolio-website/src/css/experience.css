@@ -5,7 +5,7 @@
   grid-gap: 2em; /* Add some gap between rows and columns */
   grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Create a flexible number of columns */
   grid-auto-rows: 10px; /* Initially set to 0, will be set dynamically */
-  margin: 0px 80px -70px 80px;
+  margin: 0px 80px -40px 80px;
 }
 
 .experience-card {
@@ -23,6 +23,7 @@
   top: 8%;
   left: 6%;
   margin-bottom: 80px;
+  margin-top: 40px;
 }
 
 .company-logo {
