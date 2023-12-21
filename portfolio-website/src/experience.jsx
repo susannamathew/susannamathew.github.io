@@ -70,10 +70,11 @@ function MyWebsite( {theme} ) {
 
   const logos = {
     "Juni Learning": require('./images/juni logo.png'),
-    "First American": require('./images/fa logo.png'),
+    "First American Light": require('./images/fa logo.png'),
+    "First American Dark": require('./images/fa logo white.png'),
   };
 
-  function ExperienceCard({ roleName, company, time, description, skills }) {
+  function ExperienceCard({ roleName, company, time, description, skills, theme }) {
     // Ref for the card element
     const cardRef = useRef(null);
 
@@ -83,14 +84,23 @@ function MyWebsite( {theme} ) {
         resizeMasonryItem(cardRef.current);
       }
     }, []);
-    let logo = company && logos[company];
+    let logo;
+    // first american light vs dark logo
+    if (company) {
+      logo = (company === "First American" && theme === "dark") ? 
+              logos["First American Dark"] : 
+              logos[company] || logos["First American Light"];
+    }
     return (
       <div className="experience-card" ref={cardRef}>
         <div className="masonry-content">
+          { logo ? 
             <div className='row'>
               {logo && <img src={logo} alt={`${company} logo`} className="company-logo" />}
               <h3 className="experience-role">{roleName}</h3>
             </div>
+            : <h3 className="experience-role">{roleName}</h3>
+          }
             <div className='row'>
                     {company && <h4 className="experience-company">{company + " , "}</h4>}
                     {time && <h4 className="experience-time">{time}</h4>}
@@ -115,7 +125,6 @@ function MyWebsite( {theme} ) {
   }
 
   function resizeMasonryItem(item) {
-    // Assuming .masonry is your grid container and .masonry-content is the content wrapper inside your .experience-card
     var grid = document.getElementsByClassName('experiences-container')[0],
         rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
         rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
@@ -166,6 +175,7 @@ function MyWebsite( {theme} ) {
               time={exp.time}
               description={exp.description}
               skills={exp.skills}
+              theme={theme}
             />
           ))}
         </div>

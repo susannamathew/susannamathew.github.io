@@ -4,15 +4,15 @@
   display: grid;
   grid-gap: 2em; /* Add some gap between rows and columns */
   grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Create a flexible number of columns */
-  grid-auto-rows: 5px; /* Initially set to 0, will be set dynamically */
-  margin: 0px 80px;
+  grid-auto-rows: 10px; /* Initially set to 0, will be set dynamically */
+  margin: 0px 80px -70px 80px;
 }
 
 .experience-card {
   background-color: var(--card-color);
   opacity: 0.8;
   border-radius: 15px;
-  padding: 5px 25px;
+  padding: 25px 25px 3px 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   height: max-content;
   margin-bottom: 30px 
@@ -26,9 +26,9 @@
 }
 
 .company-logo {
-  height: 100px;
-  margin: 0px;
-  justify-content: center;
+  max-height: 100px;
+  margin-left: -15px;
+  margin-right: 10px;
 }
 
 h4 {
@@ -38,26 +38,25 @@ h4 {
 
 .row {
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: -10px;
 }
 
-.col{
-  display: flex;
-  align-items: center;
-}
 
 .experience-role {
   color: var(--text-color);
-  margin-bottom: -10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .experience-company,
 .experience-time {
   color: var(--text-color);
   margin-right: 10px;
-  margin-bottom: 2px;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .experience-description {
