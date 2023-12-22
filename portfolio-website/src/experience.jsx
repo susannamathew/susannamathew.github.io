@@ -48,7 +48,8 @@ function MyWebsite( {theme} ) {
       company: value.Company ? value.Company : "",
       time: value.Time,
       description: value.Description,
-      skills: value.Skills ? value.Skills : []
+      skills: value.Skills ? value.Skills : [],
+      github: value.Github ? value.Github : ""
     }));
   }
 
@@ -72,9 +73,11 @@ function MyWebsite( {theme} ) {
     "Juni Learning": require('./images/juni logo.png'),
     "First American Light": require('./images/fa logo.png'),
     "First American Dark": require('./images/fa logo white.png'),
+    "Github Light" : require('./images/github logo.png'),
+    "Github Dark" : require('./images/github logo white.png'),
   };
 
-  function ExperienceCard({ roleName, company, time, description, skills, theme }) {
+  function ExperienceCard({ roleName, company, time, description, skills, github, theme }) {
     // Ref for the card element
     const cardRef = useRef(null);
 
@@ -91,22 +94,43 @@ function MyWebsite( {theme} ) {
               logos["First American Dark"] : 
               logos[company] || logos["First American Light"];
     }
+    let githubLogo;
+    // github light vs dark logo
+    if (github) {
+      githubLogo = (theme === "dark") ? logos["Github Dark"] : logos["Github Light"];
+    }
+    
     return (
       <div className="experience-card" ref={cardRef}>
         <div className="masonry-content">
-          { logo ? 
-            <div className='row'>
-              {logo && <img src={logo} alt={`${company} logo`} className="company-logo" />}
-              <h3 className="experience-role">{roleName}</h3>
-            </div>
-            : <h3 className="experience-role">{roleName}</h3>
+          {
+            logo ? (
+              // If logo is present
+              <div className='row'>
+                <img src={logo} alt={`${company} logo`} className="company-logo" />
+                <h3 className="experience-role">{roleName}</h3>
+              </div>
+            ) : (
+              // If logo is not present
+              <div className='row' id="git-row">
+                <h3 className="experience-role">{roleName}</h3>
+                {github && (
+                  // If github link is present
+                  <div className='github-logo-container'>
+                    <a href={github} target="_blank" rel="noopener noreferrer" className="github-link">
+                      <img src={githubLogo} alt="GitHub logo" className="github-logo" />
+                    </a>
+                  </div>
+                )}
+              </div>
+            )
           }
             <div className='row'>
                     {company && <h4 className="experience-company">{company + " , "}</h4>}
                     {time && <h4 className="experience-time">{time}</h4>}
             </div>
             <h4 className="experience-description">{description}</h4>
-            {skills && <SkillList skills={skills} />}
+              {skills && <SkillList skills={skills} />}
           </div>
         </div>
     );
@@ -189,7 +213,9 @@ function MyWebsite( {theme} ) {
               roleName={exp.name}
               time={exp.time}
               description={exp.description}
+              github = {exp.github}
               skills={exp.skills}
+              theme = {theme}
             />
           ))}
         </div>
