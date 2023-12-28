@@ -1,9 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.e15e9768.css",
-    "main.js": "/static/js/main.a58c6757.js",
+    "main.css": "/static/css/main.b1c1b60f.css",
+    "main.js": "/static/js/main.775a1f1c.js",
     "static/media/resume preview.png": "/static/media/resume preview.b15619f0e5908437e10b.png",
+    "static/media/headshot dark.png": "/static/media/headshot dark.ffb69a20c08515d3667d.png",
+    "static/media/headshot light.png": "/static/media/headshot light.bd2d0ec0c7178e27225c.png",
     "static/media/ArgentPixelCF-Italic.otf": "/static/media/ArgentPixelCF-Italic.5e3f3f54984a5075eb07.otf",
+    "static/media/about art.svg": "/static/media/about art.e7a1aeaee2793aec719765cd63132987.svg",
     "static/media/ArgentPixelCF-Regular.otf": "/static/media/ArgentPixelCF-Regular.5b8d8cd894e14a34066f.otf",
     "static/media/juni logo.png": "/static/media/juni logo.1182c66a843b662c02e4.png",
     "static/media/fa logo.png": "/static/media/fa logo.d4069a37bb351e16e78b.png",
@@ -20,11 +23,11 @@
     "index.html": "/index.html",
     "static/media/cloud2.svg": "/static/media/cloud2.31b4615397c4c5b338bd3c3c5adddbd7.svg",
     "static/media/cloud1.svg": "/static/media/cloud1.73795ec505afa23b35671281b6ef1494.svg",
-    "main.e15e9768.css.map": "/static/css/main.e15e9768.css.map",
-    "main.a58c6757.js.map": "/static/js/main.a58c6757.js.map"
+    "main.b1c1b60f.css.map": "/static/css/main.b1c1b60f.css.map",
+    "main.775a1f1c.js.map": "/static/js/main.775a1f1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e15e9768.css",
-    "static/js/main.a58c6757.js"
+    "static/css/main.b1c1b60f.css",
+    "static/js/main.775a1f1c.js"
   ]
 }
