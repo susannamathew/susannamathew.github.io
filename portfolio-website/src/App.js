@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Routes, } from 'react-router-dom';
 import Home from './home.jsx'; 
 import Experience from './experience.jsx'; 
 import Resume from './resume.jsx'; 
+import About from './about.jsx'; 
 import './css/App.css';
 const Research = () => <div>Research Page</div>;
 
@@ -36,9 +37,8 @@ function App() {
         <nav>
           <a href="/"><div className="logo"></div></a>
           <ul className="nav-links">
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="#/about">ABOUT</a></li>
             <li><a href="#/experience">EXPERIENCE</a></li>
-            <li><a href="#">RESEARCH</a></li>
             <li><a href="#/resume">RESUME</a></li>
 
             <li className="theme-switch-wrapper">
@@ -54,7 +54,7 @@ function App() {
           <Route path="/" element={<Home theme={theme} />} />
           <Route path="/experience" element={<Experience theme={theme} />} />
           <Route path="/resume" element={<Resume theme={theme} />} />
-          <Route path="/research" element={<Research />} />
+          <Route path="/about" element={<About theme={theme}/>} />
         </Routes>
       </section>
     </Router>
